@@ -5,7 +5,8 @@ SERVE_DOCKER_URI = "us-docker.pkg.dev/deeplearning-platform-release/vertex-model
 PROJECT_ID = "cc-assignment-2-442707"
 REGION = "us-central1"
 MODEL_NAME = "stable-diffusion-2-1"
-SERVICE_ACCOUNT = "140506736101-compute@developer.gserviceaccount.com"
+# SERVICE_ACCOUNT = "140506736101-compute@developer.gserviceaccount.com"
+SERVICE_ACCOUNT = "hrehman.bese22seecs@seecs.edu.pk"
 
 def deploy_model(model_id, task):
     """Create a Vertex AI Endpoint and deploy the specified model to the endpoint."""
