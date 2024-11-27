@@ -1,4 +1,5 @@
 import os
+import json
 from dotenv import load_dotenv
 
 load_dotenv("enviornm.env")
@@ -18,3 +19,13 @@ class Configurations:
     MACHINE_TYPE = os.getenv("MACHINE_TYPE")  
     ACCELERATOR_TYPE =  os.getenv("ACCELERATOR_TYPE") 
     ACCELERATOR_COUNT = os.getenv("ACCELERATOR_COUNT")  
+
+    # Function to extract elements
+    def extract_elements(json_file_path):
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+
+        text = data.get("text", None)
+        parameters = data.get("parameters", {})
+
+        return text, parameters

@@ -1,0 +1,10 @@
+{
+    "text": "a fox",
+     "parameters":
+     {
+        "height": 768,
+        "width": 768,
+        "num_inference_steps": 25,
+        "guidance_scale": 7.5
+    }
+}

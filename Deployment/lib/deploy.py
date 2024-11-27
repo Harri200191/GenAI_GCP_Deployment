@@ -56,3 +56,7 @@ class Deploy:
         print(f"Model deployed to endpoint: {endpoint.resource_name}")
 
         return model, endpoint
+    
+    def inference_test(self, endpoint, instances, parameters):
+        response = endpoint.predict(instances=instances, parameters=parameters)
+        return response
