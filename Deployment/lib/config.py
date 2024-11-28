@@ -22,6 +22,17 @@ class Configurations:
 
     # Function to extract elements
     def extract_elements(json_file_path):
+        """
+            Extract text and parameters from the given JSON file.
+
+            Args:
+                json_file_path: str, the path to the JSON file.
+
+            Returns:
+                text: str, the text to be processed.
+                parameters: dict, the parameters to be passed to the model.
+        """
+        
         with open(json_file_path, 'r') as file:
             data = json.load(file)
 
