@@ -58,5 +58,17 @@ class Deploy:
         return model, endpoint
     
     def inference_test(self, endpoint, instances, parameters):
+        """
+            Send a prediction request to the deployed model.
+
+            Args:
+                endpoint: Vertex AI Endpoint resource.
+                instances: list, instances to predict.
+                parameters: dict, parameters to predict.
+
+            Returns:
+                response: dict, prediction
+        """
+        
         response = endpoint.predict(instances=instances, parameters=parameters)
         return response
