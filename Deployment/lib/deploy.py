@@ -3,7 +3,7 @@ from lib.config import Configurations
 
 class Deploy:
     def __init__(self):
-        deployment_configs = Configurations()
+        self.deployment_configs = Configurations()
 
     def deploy_model(self, model_id, task):
         """
